@@ -1,0 +1,16 @@
+<h1 class="pb-4">Explore Random</h1>
+
+
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+  <% if(recipeItem!="") {%>
+  <a href="/recipe/<%=recipeItem._id%>" class="col text-center category_link">
+    <div class="category__img category__img--large shadow">
+      <img src="uploads/<%=recipeItem.image%>" alt="<%=recipeItem.name%>" loading="lazy">
+    </div>
+    <div class="pt-1"><%= recipeItem.name %></div>
+  </a>
+  <% }else{ %>
+  <p>No item Found</p>
+  <% } %>
+
+</div>
